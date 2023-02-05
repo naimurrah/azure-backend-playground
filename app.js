@@ -11,10 +11,11 @@ app.use(express.json());
 app.use(cors());
 
 app.listen(PORT_NUM,  async () => {
-    console.log("This works")
+    console.log("This works");
+    console.log(process.env);
 });
 
 app.get("/", (req, res) => {
-    res.send(process.env)
+    res.send("process.env")
 });
 
