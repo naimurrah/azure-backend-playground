@@ -8,14 +8,13 @@ const PORT_NUM = process.env.APPSETTING_SERVER_PORT || 8080;
 
 app.use(express.json());
 
-mongoose.set('strictQuery', true);
 app.use(cors());
 
 app.listen(PORT_NUM,  async () => {
-    res.send(process.env)
+    console.log("This works")
 });
 
 app.get("/", (req, res) => {
-    res.json({test:"klflkaf"});
+    res.send(process.env)
 });
 
